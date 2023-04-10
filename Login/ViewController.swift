@@ -15,11 +15,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailLineView: UIView!
     @IBOutlet weak var passwordLineView: UIView!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var letterImageView: UIImageView!
+    @IBOutlet weak var lockImageView: UIImageView!
+    
     
     //MARK: -- IBActions
     @IBAction func loginButtonAction(_ sender: UIButton) {
         
     }
+    
+    @IBAction func signUpButtonAction(_ sender: UIButton) {
+    }
+    
     
     //MARK: -- Life cycle
     override func viewDidLoad() {

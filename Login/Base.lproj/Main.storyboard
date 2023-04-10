@@ -159,6 +159,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Sign up">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signUpButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Srv-Lo-TFD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -188,9 +191,12 @@
                     <connections>
                         <outlet property="emailLineView" destination="PWU-AS-b0s" id="DMA-RA-985"/>
                         <outlet property="emailTextField" destination="ou8-9H-LHo" id="hol-Y2-j0o"/>
+                        <outlet property="letterImageView" destination="ibY-uw-Boi" id="9Ls-aa-X5a"/>
+                        <outlet property="lockImageView" destination="RLo-ha-3x7" id="4i0-Gl-AC2"/>
                         <outlet property="loginButton" destination="0Ia-TD-B7O" id="3fb-OP-GnZ"/>
                         <outlet property="passwordLineView" destination="Gex-T0-50b" id="MPs-Xs-JjQ"/>
                         <outlet property="passwordTextField" destination="QjB-90-vQk" id="Dpb-jX-sa7"/>
+                        <outlet property="signUpButton" destination="R9h-lW-RIV" id="4M0-z4-shw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
