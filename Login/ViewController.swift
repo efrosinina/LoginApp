@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     //MARK: -- IBOutlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -19,23 +18,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var letterImageView: UIImageView!
     @IBOutlet weak var lockImageView: UIImageView!
     
-    
-    //MARK: -- IBActions
-    @IBAction func loginButtonAction(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func signUpButtonAction(_ sender: UIButton) {
-    }
-    
-    
     //MARK: -- Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addShadow()
     }
+    //MARK: -- IBActions
+    @IBAction func loginButtonAction(_ sender: UIButton) {
+    }
     
+    @IBAction func signUpButtonAction(_ sender: UIButton) {
+    }
     //MARK: -- Methods
     private func addShadow() {
         loginButton.layer.shadowColor = UIColor.black.cgColor

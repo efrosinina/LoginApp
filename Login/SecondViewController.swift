@@ -5,8 +5,7 @@
 //  Created by Елизавета Ефросинина on 07/04/2023.
 //
 
-import Foundation
+import UIKit
 
 final class SecondViewController: ViewController {
-    
 }
