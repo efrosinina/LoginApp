@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KCE-WT-OuR">
-                                <rect key="frame" x="30" y="164.33333333333334" width="333" height="403.33333333333326"/>
+                                <rect key="frame" x="30" y="165.33333333333334" width="333" height="401.33333333333326"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Notes" translatesAutoresizingMaskIntoConstraints="NO" id="luK-BL-xB4">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="166.66666666666666"/>
@@ -80,6 +80,7 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QjB-90-vQk">
                                                 <rect key="frame" x="50" y="0.0" width="283" height="42"/>
+                                                <color key="tintColor" systemColor="tintColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -107,23 +108,23 @@
                                             <constraint firstItem="Gex-T0-50b" firstAttribute="leading" secondItem="D3h-Ly-mdd" secondAttribute="leading" id="SWt-yY-FQQ"/>
                                             <constraint firstItem="RLo-ha-3x7" firstAttribute="top" secondItem="D3h-Ly-mdd" secondAttribute="top" id="VhB-9Z-MTh"/>
                                             <constraint firstItem="Gex-T0-50b" firstAttribute="top" secondItem="QjB-90-vQk" secondAttribute="bottom" constant="8" id="d7m-tF-Uk4"/>
+                                            <constraint firstAttribute="trailing" secondItem="QjB-90-vQk" secondAttribute="trailing" id="kdJ-7k-C5R"/>
                                             <constraint firstItem="RLo-ha-3x7" firstAttribute="leading" secondItem="D3h-Ly-mdd" secondAttribute="leading" id="rBO-y8-FVd"/>
                                             <constraint firstItem="QjB-90-vQk" firstAttribute="leading" secondItem="RLo-ha-3x7" secondAttribute="trailing" constant="8" id="s44-pV-NU1"/>
-                                            <constraint firstAttribute="trailing" secondItem="QjB-90-vQk" secondAttribute="trailing" id="sVi-Yb-mYo"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OnR-Bp-j3y">
-                                        <rect key="frame" x="0.0" y="319.66666666666663" width="333" height="27"/>
+                                        <rect key="frame" x="0.0" y="319.66666666666663" width="333" height="25"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="27" id="lB7-Yf-7xj"/>
+                                            <constraint firstAttribute="height" constant="25" id="lB7-Yf-7xj"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-TD-B7O">
-                                        <rect key="frame" x="0.0" y="361.66666666666663" width="333" height="41.666666666666686"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mR4-21-NT7">
+                                        <rect key="frame" x="0.0" y="359.66666666666663" width="333" height="41.666666666666686"/>
                                         <color key="backgroundColor" red="0.97647058959999999" green="0.86666667460000002" blue="0.74509805439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="0Ia-TD-B7O" secondAttribute="height" multiplier="8:1" id="6nu-7J-DME"/>
+                                            <constraint firstAttribute="width" secondItem="mR4-21-NT7" secondAttribute="height" multiplier="8:1" id="YKB-qc-vMi"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -136,14 +137,13 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="loginButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X8u-qW-QZj"/>
-                                            <segue destination="Qmv-Jw-YDW" kind="show" id="VNi-ih-1xn"/>
+                                            <action selector="loginButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AQu-1r-Ilg"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDj-y6-53C">
-                                <rect key="frame" x="82.666666666666671" y="582.66666666666663" width="227.66666666666663" height="31"/>
+                                <rect key="frame" x="82.666666666666671" y="581.66666666666663" width="227.66666666666663" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-2J-Xu9">
                                         <rect key="frame" x="0.0" y="0.0" width="151.66666666666666" height="31"/>
@@ -193,10 +193,11 @@
                         <outlet property="emailTextField" destination="ou8-9H-LHo" id="hol-Y2-j0o"/>
                         <outlet property="letterImageView" destination="ibY-uw-Boi" id="9Ls-aa-X5a"/>
                         <outlet property="lockImageView" destination="RLo-ha-3x7" id="4i0-Gl-AC2"/>
-                        <outlet property="loginButton" destination="0Ia-TD-B7O" id="3fb-OP-GnZ"/>
+                        <outlet property="loginButton" destination="mR4-21-NT7" id="TEp-Z9-6y7"/>
                         <outlet property="passwordLineView" destination="Gex-T0-50b" id="MPs-Xs-JjQ"/>
                         <outlet property="passwordTextField" destination="QjB-90-vQk" id="Dpb-jX-sa7"/>
                         <outlet property="signUpButton" destination="R9h-lW-RIV" id="4M0-z4-shw"/>
+                        <segue destination="Qmv-Jw-YDW" kind="show" identifier="goToNextScreen" id="LPt-kL-KCd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -229,6 +230,9 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

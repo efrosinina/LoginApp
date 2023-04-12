@@ -7,5 +7,5 @@
 
 import UIKit
 
-final class SecondViewController: ViewController {
+final class SecondViewController: UIViewController {
 }
