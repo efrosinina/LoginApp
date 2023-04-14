@@ -82,7 +82,7 @@
                                                 <rect key="frame" x="50" y="0.0" width="283" height="42"/>
                                                 <color key="tintColor" systemColor="tintColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RLo-ha-3x7">
                                                 <rect key="frame" x="0.0" y="1" width="42" height="40"/>

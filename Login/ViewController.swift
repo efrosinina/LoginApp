@@ -21,8 +21,20 @@ class ViewController: UIViewController {
     //MARK: -- Properties
     private let wrongColor = UIColor.red
     private let defaultColor = UIColor.systemGray4
-    private var email = ""
-    private var password: String = ""
+    private var email = "" {
+        didSet {
+            loginButton.isUserInteractionEnabled = !(email.isEmpty || password.isEmpty)
+            loginButton.alpha = !(email.isEmpty || password.isEmpty) ? 1 : 0.5
+        }
+    }
+    private var password: String = "" {
+        didSet {
+            loginButton.isUserInteractionEnabled = !(email.isEmpty && password.isEmpty)
+            loginButton.alpha = !(email.isEmpty && password.isEmpty) ? 1 : 0.5
+        }
+    }
+    private let mockEmail = "abc@gmail.com"
+    private let mockPassword = "123Az*"
     private let emailRegex = #"^\S+@\S+\.\S+$"#
     private let passwordRegex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[$@$!%*?&#])[A-Za-z\\d$@$!%*?&#]{4,}$"
     
@@ -34,7 +46,15 @@ class ViewController: UIViewController {
         passwordTextField.delegate = self
         addShadow()
         emailTextField.becomeFirstResponder()
+        loginButton.isUserInteractionEnabled = false
+        loginButton.alpha = 0.5
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
+    
     //MARK: -- IBActions
     @IBAction func loginButtonAction(_ sender: Any) {
         emailTextField.resignFirstResponder()
@@ -56,10 +76,10 @@ class ViewController: UIViewController {
             alert.addAction(action)
             present(alert, animated: true)
         }
+        
     }
     
-    @IBAction func signUpButtonAction(_ sender: UIButton) {
-    }
+    @IBAction func signUpButtonAction(_ sender: UIButton) {}
     //MARK: -- Methods
     private func addShadow() {
         loginButton.layer.shadowColor = UIColor.black.cgColor
@@ -85,6 +105,7 @@ extension ViewController: UITextFieldDelegate {
                 email = ""
                 makeErrorField(textField: textField)
             }
+            
         case passwordTextField:
             let isValidPassword = check(password: text)
             
@@ -96,17 +117,18 @@ extension ViewController: UITextFieldDelegate {
                 password = ""
                 makeErrorField(textField: textField)
             }
+            
         default:
             print("Error")
         }
     }
     //MARK: -- Methods for Extension
     private func check(email: String) -> Bool {
-        return email.match(emailRegex) && !email.isEmpty
+        return email == mockEmail && email.match(emailRegex) && !email.isEmpty
     }
     
     private func check(password: String) -> Bool {
-        return password.count >= 4 && password.match(passwordRegex) && !password.isEmpty
+        return password == mockPassword && password.count >= 4 && password.match(passwordRegex)
     }
     
     private func makeErrorField(textField: UITextField) {
