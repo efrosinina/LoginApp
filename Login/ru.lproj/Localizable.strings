@@ -1,0 +1,12 @@
+/*
+  Localizable.strings
+  Login
+
+  Created by Елизавета Ефросинина on 11/04/2023.
+  
+*/
+
+"Error" = "Ошибка";
+"Wrong e-mail or password" = "Неправильная электронная почта или пароль";
+"OK" = "ОК";
+
