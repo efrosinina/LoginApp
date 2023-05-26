@@ -27,7 +27,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
                                                 <rect key="frame" x="50" y="0.0" width="283" height="42"/>
                                                 <color key="tintColor" systemColor="tintColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="one-time-code"/>
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RLo-ha-3x7">
                                                 <rect key="frame" x="0.0" y="1" width="42" height="40"/>
@@ -189,6 +189,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kmI-t4-QZk"/>
                     <connections>
+                        <outlet property="donthaveAnAccountLabel" destination="eb3-2J-Xu9" id="bvp-rE-JUV"/>
                         <outlet property="emailLineView" destination="PWU-AS-b0s" id="DMA-RA-985"/>
                         <outlet property="emailTextField" destination="ou8-9H-LHo" id="hol-Y2-j0o"/>
                         <outlet property="letterImageView" destination="ibY-uw-Boi" id="9Ls-aa-X5a"/>
