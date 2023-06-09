@@ -28,8 +28,8 @@ final class KeyChainManager {
     static func checkUser(with email: String, password: String) -> Bool {
         let query: [NSString: Any] = [
             kSecClass: kSecClassGenericPassword,
-            kSecAttrAccount: email,
-            kSecAttrService: service,
+            kSecAttrAccount: email as AnyObject,
+            kSecAttrService: service as AnyObject,
             kSecReturnData: true
         ]
         

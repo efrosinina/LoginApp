@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var donthaveAnAccountLabel: UILabel!
     
     //MARK: -- Properties
+    private let viewModel = LoginViewModel()
     var isLoginScreen: Bool = true
     private let wrongColor = UIColor.red
     private let defaultColor = UIColor.systemGray4
@@ -35,8 +36,6 @@ class ViewController: UIViewController {
             loginButton.alpha = !(email.isEmpty && password.isEmpty) ? 1 : 0.5
         }
     }
-    
-    private let emailRegex = #"^\S+@\S+\.\S+$"#
     
     //MARK: -- Life cycle
     override func viewDidLoad() {
@@ -108,13 +107,13 @@ class ViewController: UIViewController {
     }
 }
 
-//MARK: -- Extensions
+//MARK: -- UITextFieldDelegate
 extension ViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let text = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !text.isEmpty else { return }
         switch textField {
         case emailTextField:
-            let isValidEmail = check(email: text)
+            let isValidEmail = viewModel.checkEmail(email: text)
             
             if isValidEmail {
                 email = text
@@ -126,7 +125,7 @@ extension ViewController: UITextFieldDelegate {
             }
             
         case passwordTextField:
-            let isValidPassword = check(password: text)
+            let isValidPassword = viewModel.checkPassword(password: text)
             
             if isValidPassword {
                 password = text
@@ -143,14 +142,6 @@ extension ViewController: UITextFieldDelegate {
     }
     
     //MARK: -- Methods for Extension
-    private func check(email: String) -> Bool {
-        return email.match(emailRegex) && !email.isEmpty
-    }
-    
-    private func check(password: String) -> Bool {
-        return password.count >= 4
-    }
-    
     private func makeErrorField(textField: UITextField) {
         switch textField {
         case emailTextField:
